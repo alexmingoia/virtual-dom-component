@@ -1,4 +1,8 @@
-# virtual-dom-component [![Build Status](https://secure.travis-ci.org/alexmingoia/virtual-dom-component.png?branch=master)](http://travis-ci.org/alexmingoia/virtual-dom-component) [![NPM version](https://badge-me.herokuapp.com/api/npm/virtual-dom-component.png)](http://badges.enytc.com/for/npm/virtual-dom-component) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/alexmingoia/virtual-dom-component/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# virtual-dom-component
+
+[![Build Status](https://secure.travis-ci.org/alexmingoia/virtual-dom-component.png)](http://travis-ci.org/alexmingoia/virtual-dom-component) 
+[![NPM version](https://badge.fury.io/js/virtual-dom-component.png)](http://badge.fury.io/js/virtual-dom-component) 
+[![Dependency Status](https://david-dm.org/alexmingoia/virtual-dom-component.png)](http://david-dm.org/alexmingoia/virtual-dom-component)
 
 > A virtual DOM component (view).
 
