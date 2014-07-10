@@ -73,7 +73,7 @@ If you have any problem or suggestion please open an issue [here](https://github
 
 The BSD License
 
-Copyright (c) 2014, Alex Mingoia <talk@alexmingoia.com>
+Copyright (c) 2014, Alex Mingoia
 
 All rights reserved.
 
@@ -87,7 +87,7 @@ are permitted provided that the following conditions are met:
   list of conditions and the following disclaimer in the documentation and/or
   other materials provided with the distribution.
 
-* Neither the name of the Alex Mingoia <talk@alexmingoia.com> nor the names of its
+* Neither the name of the Alex Mingoia nor the names of its
   contributors may be used to endorse or promote products derived from
   this software without specific prior written permission.
 
