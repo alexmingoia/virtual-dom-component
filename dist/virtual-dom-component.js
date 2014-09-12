@@ -1,3 +1,4 @@
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var n;"undefined"!=typeof window?n=window:"undefined"!=typeof global?n=global:"undefined"!=typeof self&&(n=self),n.VirtualComponent=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*!
  * virtual-dom-component
  * https://github.com/alexmingoia/virtual-dom-component
@@ -101,3 +102,51 @@ VirtualComponent.extend = function (prototype) {
 
   return child;
 };
+
+},{"geval/single":3}],2:[function(require,module,exports){
+module.exports = Event
+
+function Event() {
+    var listeners = []
+
+    return { broadcast: broadcast, listen: event }
+
+    function broadcast(value) {
+        for (var i = 0; i < listeners.length; i++) {
+            listeners[i](value)
+        }
+    }
+
+    function event(listener) {
+        listeners.push(listener)
+
+        return removeListener
+
+        function removeListener() {
+            var index = listeners.indexOf(listener)
+            if (index !== -1) {
+                listeners.splice(index, 1)
+            }
+        }
+    }
+}
+
+},{}],3:[function(require,module,exports){
+var Event = require('./event.js')
+
+module.exports = Single
+
+function Single() {
+    var tuple = Event()
+
+    return function event(value) {
+        if (typeof value === "function") {
+            return tuple.listen(value)
+        } else {
+            return tuple.broadcast(value)
+        }
+    }
+}
+
+},{"./event.js":2}]},{},[1])(1)
+});
