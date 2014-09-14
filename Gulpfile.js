@@ -40,7 +40,7 @@ gulp.task('wrap-umd', function() {
   });
 
   bundler.add('./lib/virtual-dom-component.js');
-  bundler._ignore.push('../lib-cov/virtual-dom-component');
+  bundler.exclude('../lib-cov/virtual-dom-component');
 
   return bundler.bundle()
     .pipe(source('virtual-dom-component.js'))
@@ -51,7 +51,7 @@ gulp.task('browserify-tests', function() {
   var bundler = new Browserify();
 
   bundler.add('./test/virtual-dom-component.js');
-  bundler._ignore.push('../lib-cov/virtual-dom-component');
+  bundler.exclude('../lib-cov/virtual-dom-component');
 
   return bundler.bundle()
     .pipe(source('tests.js'))
