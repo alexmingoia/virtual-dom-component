@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/virtual-dom-component.svg?style=flat)](https://npmjs.org/package/virtual-dom-component) 
 [![Dependency Status](http://img.shields.io/david/alexmingoia/virtual-dom-component.svg?style=flat)](https://david-dm.org/alexmingoia/virtual-dom-component)
 
-> A [https://github.com/Matt-Esch/virtual-dom](virtual DOM) component (view).
+> A [Virtual DOM](https://github.com/Matt-Esch/virtual-dom) component (view).
 
 Virtual components expose `events`, `state`, and a `render` function.
 
