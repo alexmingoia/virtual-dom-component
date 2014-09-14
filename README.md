@@ -45,6 +45,9 @@ Using browser script tag and global (UMD wrapper):
 Create a component:
 
 ```javascript
+var h = require('virtual-hyperscript');
+var VirtualComponent = require('virtual-dom-component');
+
 var LoginForm = VirtualComponent.extend({
   render: function (state) {
     return h('form', [
